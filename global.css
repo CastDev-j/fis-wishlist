@@ -1,1 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  background: #fff;
+}
+
+.card {
+  width: 440px;
+  max-width: 100%;
+  padding: 40px;
+  border: 1px solid rgb(0 0 0 / 10%);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.card-header {
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  margin-top: 4px;
+  color: rgb(0 0 0 / 64%);
+}
+
+#add-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 500;
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+#add-btn:hover {
+  background: rgb(0 0 0 / 85%);
+}
+
+#add-btn:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.list-section {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgb(0 0 0 / 10%);
+}
+
+.list-section h2 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(0 0 0 / 64%);
+}
+
+#empty-msg {
+  margin-top: 12px;
+  color: rgb(0 0 0 / 56%);
+}
+
+#empty-msg[hidden] {
+  display: none;
+}
+
+#wishlist {
+  list-style: none;
+  margin-top: 8px;
+}
+
+#wishlist li {
+  padding: 12px 8px;
+  border-radius: 6px;
+  outline: none;
+  overflow-wrap: anywhere;
+}
+
+#wishlist li + li {
+  border-top: 1px solid rgb(0 0 0 / 10%);
+}
+
+#wishlist li:focus {
+  background: rgb(0 0 0 / 5%);
+  outline: 1px solid rgb(0 0 0 / 40%);
+  outline-offset: -1px;
+}
+
+#wishlist li:empty::before {
+  content: "Escribe tu deseo...";
+  color: rgb(0 0 0 / 44%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #add-btn {
+    transition: none;
+  }
+}
